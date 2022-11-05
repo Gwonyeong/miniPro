@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>baseball</title>
+    </head>
+    <body>
+        <h1><a href="/">닉네임 설정</a></h1>
+
+        닉네임 : <%= nickname %> <br />
+        <% if(answer){%>축하합니다!<% } %> <% if(!answer){%> 랜덤 번호 :
+        <form action="/answer">
+            <input
+                type="text"
+                name="submitAnswer"
+                maxlength="4"
+                minlength="4"
+            />
+            <input type="submit" />
+        </form>
+        <br />
+        <%= randomNumber %> <% } %>
+    </body>
+</html>
